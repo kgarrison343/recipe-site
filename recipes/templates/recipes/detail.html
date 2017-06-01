@@ -1,3 +1,6 @@
+{% extends 'recipes/base.html' %}
+
+{% block content %}
 <h1>{{ recipe.recipe_name }}</h1>
 
 <h2>{{ recipe.recipe_description }}</h2>
@@ -15,3 +18,4 @@
   <li>{{ step.step_text }}</li>
   {% endfor %}
 </ol>
+{% endblock %}
