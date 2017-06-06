@@ -25,7 +25,7 @@ SECRET_KEY = 'u_t1g26k1=^a20l5!i8a*)39#4@vp^^wu3fpie1o4+nodo70!u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.0.15", "127.0.0.1", "localhost"]
 
 
 # Application definition
