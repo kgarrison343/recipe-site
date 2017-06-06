@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Recipe(models.Model):
     recipe_name = models.CharField(max_length=200)
-    recipe_description = models.CharField(max_length=500)
+    recipe_description = models.TextField()
     pub_date = models.DateTimeField('date published')
     def __str__(self):
         return self.recipe_name
@@ -11,7 +11,7 @@ class Recipe(models.Model):
 class Step(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     step_num = models.IntegerField(default=1)
-    step_text = models.CharField(max_length=500)
+    step_text = models.TextField()
     def __str__(self):
         return self.step_text
 
