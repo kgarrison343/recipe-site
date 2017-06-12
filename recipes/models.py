@@ -10,7 +10,6 @@ class Recipe(models.Model):
 
 class Step(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
-    step_num = models.IntegerField(default=1)
     step_text = models.TextField()
     def __str__(self):
         return self.step_text
