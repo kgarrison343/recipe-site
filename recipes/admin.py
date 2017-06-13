@@ -16,7 +16,7 @@ class RecipeAdmin(admin.ModelAdmin):
         (None, {'fields': ['recipe_name', 'recipe_description']}),
         ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
     ]
-    inlines = [StepInline, IngredientInline]
+    inlines = [IngredientInline, StepInline]
     
 # Register your models here.
 admin.site.register(Recipe, RecipeAdmin)
