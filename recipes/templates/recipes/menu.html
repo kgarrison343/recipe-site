@@ -2,7 +2,7 @@
 
 {% block content %}
 {% if recipe_list %}
-<h1>List of Recipes</h1>
+<h1>Menu</h1>
 
 <ul>
   {% for recipe in recipe_list %}
@@ -11,8 +11,6 @@
 </ul>
 
 {% else %}
-<p>No recipes are available.</p>
+<p>No recipes are currently on the menu.</p>
 {% endif %}
-
-<a href="{% url 'recipes:menu' %}">View Menu</a>
 {% endblock %}

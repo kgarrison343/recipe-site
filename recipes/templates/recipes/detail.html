@@ -19,5 +19,14 @@
   {% endfor %}
 </ol>
 
+<form action="{% url 'recipes:toggle' recipe.id %}" method="post">
+  {% csrf_token %}
+  <label>
+    <input type="checkbox" name="on_the_menu" {% if recipe.on_the_menu %}checked{% endif %} />
+    On the Menu
+  </label>
+  <button type="submit">Submit</button>
+</form>
+
 <a href="{% url 'recipes:index' %}">Return to index</a>
 {% endblock %}

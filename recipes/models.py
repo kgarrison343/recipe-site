@@ -4,7 +4,9 @@ from django.db import models
 class Recipe(models.Model):
     recipe_name = models.CharField(max_length=200)
     recipe_description = models.TextField()
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('date published', auto_now_add=True)
+    on_the_menu = models.BooleanField(default=False)
+    recipe_url = models.URLField(blank=True)
     def __str__(self):
         return self.recipe_name
 
