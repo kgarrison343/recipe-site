@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Recipe, Step, Ingredient
+from .models import Recipe, Category, Step, Ingredient
 
 class StepInline(admin.TabularInline):
     model = Step
@@ -13,8 +13,9 @@ class IngredientInline(admin.TabularInline):
 
 class RecipeAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None, {'fields': ['recipe_name', 'recipe_url', 'recipe_description', 'on_the_menu']}),]
+        (None, {'fields': ['recipe_name', 'recipe_url', 'recipe_description', 'on_the_menu', 'categories']}),]
     inlines = [IngredientInline, StepInline]
     
 # Register your models here.
 admin.site.register(Recipe, RecipeAdmin)
+admin.site.register(Category)
