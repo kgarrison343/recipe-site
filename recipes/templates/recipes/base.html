@@ -10,6 +10,7 @@
       .navbar li a{display:block; padding: 14px 16px;color: #eee; text-decoration: none;}
       .navbar li a:hover {background-color: #586f7c;}
     </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <title>Recipes</title>
   </head>
   <body>
@@ -21,6 +22,9 @@
     </ul>
     
     {% block content %}
+    {% endblock %}
+    
+    {% block scripts %}
     {% endblock %}
   </body>
 </html>
