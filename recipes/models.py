@@ -8,7 +8,7 @@ class Category(models.Model):
     
 class Recipe(models.Model):
     recipe_name = models.CharField(max_length=200)
-    recipe_description = models.TextField()
+    recipe_description = models.TextField(blank=True)
     pub_date = models.DateTimeField('date published', auto_now_add=True)
     on_the_menu = models.BooleanField(default=False)
     recipe_url = models.URLField(blank=True)
